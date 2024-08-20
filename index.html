@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+</head>
+<body>
+  <div class="main-container">
+    <div class="sub-container1">
+      <div class="details">
+        <div id="head">
+          <div id="head1"><h2>Mortgage Calculator</h2></div>
+          <div ><button id="head2">Clear All</button></div>
+        </div>
+          <form action="">
+              <div class="amount">
+                <p for="Mortgage Amount" class="lbl">Mortgage Amount</p>
+                <div class="sub-am">
+                  <span class="started" id="currency">&#163</span>
+                  <input type="number" name="amount" id="amount-input">
+                </div>
+                <p class="alerting">This field is required</p>
+              </div>
+                <div class="sub-sub">
+                    <div class="term">
+                      <p for="Mortgage Term" class="lbl">Mortgage Term</p>
+                      <div class="sub-am">
+                          <input type="number" name="years" id="amount-input">
+                          <span class="ended">years</span>
+                      </div>
+                      <p class="alerting">This field is required</p>
+                    </div>
+                    <div class="rate">
+                        <p for="Interest Rate" class="lbl">Interest Rate</p>
+                        <div class="sub-am">
+                          <input type="number" name="rate" id="amount-input">
+                          <span class="ended"  id="currency">&#37 </span>
+                        </div>
+                        <p class="alerting">This field is required</p>
+                    </div>
+                 </div>
+              <div class="types">
+                  <p for="Mortgage Type">Mortgage Type</p>
+                  <div class="repayment">
+                    <input type="radio" name="options" ><label id="Repayment">Repayment</label>
+                  </div>
+                  <div class="interest-only">
+                    <input type="radio" name="options" ><label id="only">Interest Only</label>
+                  </div>
+                  <p class="alerting">This field is required</p>
+                  
+              </div>
+    
+              <button class="Calculate"><img src="assets/images/icon-calculator.svg" alt="" srcset="" height="25" width="25" id="img1"><p>Calculate Repayments</p> </button>
+            </div>
+          </form>
+    </div>
+    <div class="sub-container2">
+          <!-- Empty results start -->
+    <div id="results">
+      <div class="sub-results"> 
+        <h3>Results shown here</h3>
+        <p>Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.
+        </p> 
+      </div>
+    </div>
+      <!-- Empty results end -->
+      <!-- Completed results start -->
+    <div class="answer">
+      <h2 class="your-results">Your results</h2>
+
+      <p class="p-your">Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.</p>
+      <div class="sub-answer">
+
+        <p>Your monthly repayments</p>
+        <h1 class="monthly-repayment"></h1>
+        <hr>
+        <p>Total you'll repay over the term</p>
+        <p class="over-the-term"></p>
+      </div>
+    </div>
+
+    </div>
+    
+  </div>
+
+  
+
+  <!-- Completed results end -->
+<script src="java.js"></script>
+</body>
+</html>

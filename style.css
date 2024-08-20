@@ -1,0 +1,334 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    
+    margin: 0;
+}
+.details{
+    padding: 20px;
+}
+#head1>h2{
+    margin: 10px 0;
+}
+#head2{
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+    text-decoration: underline;
+    color: hsl(203, 7%, 48%);
+    font-size: 1.0rem;
+    padding: 0;
+}
+#head2:hover{
+    cursor: pointer;
+}
+#head{
+    margin-bottom: 15px;
+}
+div,p{
+    margin: 0;
+    padding: 0;
+}
+.sub-am,.repayment,.interest-only{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin: 7px 0 15px 0;
+    width: 99%;
+    border: 1px solid hsl(203, 7%, 48%);
+    border-radius: 8px;
+    position: relative;
+}
+.sub-am:hover, .repayment:hover, .interest-only:hover{
+    cursor: pointer;
+}
+
+span{
+    line-height: 40px;
+    background-color: hsl(202, 86%, 94%);
+    padding:0 15px;
+}/*
+.sub-am:active span{
+    background-color: hsl(61, 70%, 52%);
+}*/
+.started{
+    padding:0 15px;
+    border-radius: 8px 0 0 8px;
+}
+.ended{
+    border-radius:0 8px 8px 0;
+    position: absolute;
+    right: 0;
+}
+label,span{
+    color: hsl(203, 7%, 48%);
+}
+input{
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: 10px;
+}
+input:focus-visible{
+    outline: none;
+}
+.repayment>p,.interest-only>p{
+    line-height: 40px;
+}
+.repayment,.interest-only{
+    width: 99%; 
+}
+.repayment>input, .interest-only>input{
+    margin: 0 15px;
+    width: 18px;
+}
+input[type="radio"]{
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(203, 7%, 48%);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+}
+input[type="radio"]:checked {
+    border-color: hsl(61, 70%, 52%);
+}
+.repayment input[type="radio"]:checked {
+    border-color: hsl(61, 70%, 52%);
+}
+input[type="radio"]:checked::before{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: hsl(61, 70%, 52%);
+    border-color: hsl(61, 70%, 52%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#Repayment,#only{
+    font-weight: 700;
+    color: black;
+    line-height: 40px;
+}
+.Calculate{
+    border: none;
+    background-color: hsl(61, 70%, 52%);
+    height: 45px;
+    width: 99%;
+    border-radius: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+}
+button>p{
+    font-size: 1.0rem;
+    opacity: 0.7;
+}
+#img1{
+    margin: 10px;
+}
+#results{
+    background-image: url(assets/images/illustration-empty.svg);
+    background-color: hsl(201, 63%, 18%);
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: top 20px center;
+    height: 270px;
+    position: relative;
+    opacity: 0.9;
+    display: block;
+}
+.sub-results{
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+}
+.sub-results>h3{
+    text-align: center;
+    padding: 0;
+    margin: 10px 0;
+    color: white;
+}
+.sub-results>p{
+    text-align: center;
+    font-size: 0.9rem;
+    color: hsl(206, 16%, 69%);
+}
+.answer{
+    display: none;
+    padding: 20px;
+    background-color: hsl(201, 59%, 22%);
+    color: hsl(206, 16%, 69%);
+}
+.your-results{
+    color: white;
+}
+.p-your{
+    line-height: 25px;
+}
+.sub-answer{
+    padding:20px 15px;
+    background-color: hsl(201, 58%, 13%);
+    border-top: 4px solid hsl(61, 70%, 52%);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.monthly-repayment{
+    color: hsl(61, 70%, 52%);
+    margin: 10px 0;
+    font-size: 2.4rem;
+}
+.over-the-term{
+    color: white;
+    margin-top: 10px;
+    font-size: 1.7rem;
+}
+hr{
+    margin-bottom: 20px;
+    border-color: hsl(207, 4%, 49%);
+}
+#currency, .monthly-repayment, .over-the-term{
+    font-family: 'Times New Roman', Times, serif;
+}
+button:hover{
+    cursor: pointer;
+}
+.alerting{
+    color: red;
+    margin: 10px 0 20px;
+    display: none;
+}
+.active{
+    border: 1px solid hsl(61, 70%, 52%);
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.span-active{
+    background-color: hsl(61, 70%, 52%);
+}
+@media (min-width:375px){
+    body{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(202, 86%, 94%);
+        height: fit-content;
+    }
+    .main-container{
+        width: 320px;
+        background-color: white;
+        border-radius: 15px;
+        margin: 25px;
+    }
+    .answer, #results{
+        border-radius: 0 0 15px 15px;
+    }
+}
+@media (min-width:425px){
+    body{
+        height: fit-content;
+    }
+    .main-container{
+        width: 425px;
+    }  
+}
+@media (min-width:768px){
+    body{
+        height: fit-content;
+    }
+    .main-container{
+        width: 80%;
+    }
+    input{
+        width: 80%;
+    }
+    .sub-sub{
+        display: flex;
+        flex-direction: row;
+    }
+    .rate{
+        width: 47%;
+        margin-left: 6%;
+    }
+    .term{
+        width: 47%;
+    }
+    .Calculate{
+        width: 50%;
+    }
+}
+@media (min-width:1024px){
+    body{
+        height: 100vh;
+    }
+    .main-container{
+        width: 1010px;
+        display: flex;
+        flex-direction: row;
+        height: 450px;
+    }
+    .sub-container1{
+        width: 50%;
+    }
+    .sub-container2{
+        width: 50%;
+        height: 80%;
+    }
+    .Calculate{
+        width: 70%;
+    }
+    #results{
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 450px;
+        border-radius: 0 10px 10px 50px;
+        position: relative;
+    }
+    .sub-results{
+        position: absolute;
+        bottom: 70px;
+        line-height: 1.2rem;
+    }
+    .answer{
+        height: 410px;
+        border-radius: 0 10px 10px 50px;
+        position: relative;
+     }
+     .sub-answer{
+        position: absolute;
+        bottom: 40px;
+        width: 84%;
+        height: 150px;
+        margin-top: 0;
+     }
+     .p-your{
+        font-size: 1.2rem;
+     }
+     #head{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+     }
+     #head2{
+        line-height: 45px;
+        justify-content: end;
+        position:absolute;
+        right: 0;
+     }
+}
