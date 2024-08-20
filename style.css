@@ -139,7 +139,7 @@ button>p{
     margin: 10px;
 }
 #results{
-    background-image: url(assets/images/illustration-empty.svg);
+    background-image: url(./illustration-empty.svg);
     background-color: hsl(201, 63%, 18%);
     background-repeat: no-repeat;
     background-size: 130px;
